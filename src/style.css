@@ -1,0 +1,181 @@
+/* General styles for all pages */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Optional background color for contrast */
+}
+
+header {
+    background-color: #B40404; /* Red header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Flexbox container for nav and main */
+.container {
+    display: flex;
+    flex-direction: row; /* Horizontal layout for large screens */
+    min-height: 100vh; /* Ensures container takes full viewport height */
+}
+
+/* General styles for nav */
+nav {
+    background-color: #FF8000; /* Orange background for the nav */
+    width: 30%; /* Nav takes up 30% of the parent */
+    height: 100%; /* Full height on larger screens */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-evenly; /* Distribute items evenly */
+}
+
+/* List inside the nav */
+nav ul {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Full width of the nav */
+}
+
+nav ul li {
+    margin: 0; /* Removes default margin */
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    background-color: #FF8000; /* Same color as the nav */
+    color: white; /* White text */
+    text-align: center;
+    border-bottom: 2px solid #B40404; /* Red separators between items */
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    background-color: #FFBF00; /* Hover effect for nav links */
+}
+
+/* Main content styling */
+main {
+    flex-grow: 1; /* Ensures main takes up the remaining space */
+    background-color: #F5D0A9; /* Light tan background */
+    padding: 20px;
+}
+
+/* Image styling */
+
+
+/* Footer */
+footer {
+    background-color: #B40404;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Positioning for flexible layout */
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive design */
+img {
+    max-width: 85%; /* Image scales down proportionally based on the container's width */
+    height: auto;    /* Maintain the aspect ratio */
+    display: block;  /* Removes unwanted gaps around the image */
+    margin: 0 auto;  /* Center-align the image */
+}
+
+/* For screens larger than 750px */
+@media (min-width: 751px) {
+    .container {
+        flex-direction: row; /* Horizontal layout */
+    }
+
+    nav {
+        width: 30%; /* Nav occupies 30% of the screen width */
+        height: 100vh; /* Nav takes the full height of the screen */
+        background-color: #FF8000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; /* Evenly distributes the links */
+    }
+
+    main {
+        width: 70%;
+        text-align: left; /* Align text to the left */
+    }
+
+    #myself {
+        max-width: 400px; /* Image size on desktop */
+        margin: 0; /* Remove extra margins */
+    }
+
+    #thakscard {
+        max-width: 400px; /* Image size on desktop */
+        margin: 0; /* Remove extra margins */
+    }
+}
+
+/* For screens smaller than 750px */
+@media (max-width: 750px) {
+    .container {
+        flex-direction: column; /* Stack nav and main vertically */
+    }
+
+    nav {
+        width: 100%; /* Take full width of the screen */
+        height: auto;
+        background-color: #B40404; /* Red background for mobile */
+        flex-direction: row; /* Horizontal layout for nav links */
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Horizontal row for nav links */
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+
+
+/* Calculator styling */
+#calculator {
+    background-image: url('photos/culculator.jpg');
+    background-size: cover; /* Ensures the image covers the whole calculator container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Calculator input and buttons styling */
+#calculator input, #calculator button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Result box styling */
+#result-box {
+    width: 100%;
+    max-width: 300px; /* Set a maximum width */
+    margin: 20px auto; /* Center the result box */
+    padding: 15px;
+    background-color: #f4f4f4; /* Light background color */
+    border: 2px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center the result text */
+}
+
+/* Output text styling */
+#output {
+    font-size: 1.5em; /* Larger font size for visibility */
+    color: #333; /* Dark text color */
+}
