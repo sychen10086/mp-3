@@ -1,12 +1,12 @@
 import React from 'react';
+import styles from './style.module.css';
 
 const Header: React.FC = () => {
     return (
-        <header>
-            <h1>Thank You For Your Time!</h1>
+        <header className={styles.header}>
+            
         </header>
     );
 };
 
 export default Header;
-
